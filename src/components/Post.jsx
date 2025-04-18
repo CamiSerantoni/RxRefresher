@@ -1,15 +1,16 @@
+import classes from './Post.module.css'
 
 const names = [ 'maximilian', 'manuel']
 
-function Post(){
+function Post({author, body}) {
     
-    const chosenName = Math.random() > 0.5 ? names[0] : names[1]
+    // const chosenName = Math.random() > 0.5 ? names[0] : names[1]
 
-    return <div>
-        <p>
-          {chosenName}
+    return <div className={classes.post}>
+        <p className={classes.author}>
+          {author}
         </p>
-        <p>ReactJS is awesome</p>
+        <p className={classes.text}>{body}</p>
     </div> 
 }
 
