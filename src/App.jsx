@@ -1,9 +1,9 @@
-import PostList from "./components/PostList";
+import PostsList from "./components/PostsList";
 
 function App() {
   return (
     <main>
-      <PostList/>
+      <PostsList/>
     </main>
   );
 }
