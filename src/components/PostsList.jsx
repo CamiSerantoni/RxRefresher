@@ -1,10 +1,9 @@
-import NewPost from "./NewPost";
+
 import Post from "./Post";
 import classes from "./PostsList.module.css";
 import { useEffect, useState } from "react";
-import Modal from "./Modal";
 
-function PostsList({ isPosting, onStopPosting }) {
+function PostsList() {
   /* This code would cause a infinitive loop, so we wont to use it */
   // fetch('http://localhost:8080/posts').then(response => response.json()).then(data => {
   //   setPosts(data.posts)
@@ -42,11 +41,11 @@ function PostsList({ isPosting, onStopPosting }) {
 
   return (
     <>
-      {isPosting && (
+      {/* {isPosting && (
         <Modal onClose={onStopPosting}>
           <NewPost onCancel={onStopPosting} onAddPost={addPostHandler} />
         </Modal>
-      )}
+      )} */}
 
       {!isFetching && posts.length > 0 && (
         <ul className={classes.posts}>
