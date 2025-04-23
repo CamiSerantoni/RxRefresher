@@ -3,15 +3,6 @@ import MainHeader from "../components/MainHeader";import PostsList from "../comp
 import {useState} from "react";
 
 function Posts() {
-   const [modalIsVisible, setModalIsVisible] = useState(false);
-  //  function hideModalHandler() {
-  //   setModalIsVisible(false);
-  // }
-
-  // function showModalHandler() {
-  //   setModalIsVisible(true);
-  // }
-  
   
    return (
     <>
@@ -24,3 +15,10 @@ function Posts() {
 }
 
 export default Posts;
+
+
+export async function loader(){
+  const response = await fetch("http://localhost:8080/posts");
+  const resData = await response.json();
+  return resData.posts;
+}
